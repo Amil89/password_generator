@@ -2,7 +2,7 @@ import random
 import string as st
 
 
-print("***Password Generator***")
+print("\t***Password Generator v.1.0***")
 
 
 class Data:
