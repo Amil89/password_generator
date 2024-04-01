@@ -2,7 +2,7 @@ import random
 import string as st
 
 
-print("\t***Password Generator v.1.0***")
+print("\n*** Password Generator v.1.0 ***\n")
 
 
 class Data:
@@ -12,16 +12,18 @@ class Data:
         self.lower = st.ascii_lowercase
 
     def create_password(self, length):
-        length = input("# Enter The password length: ")
-        if length.isdigit():
-            length = int(length)
-            for _ in range(length):
-                combination = self.digits + self.upper + self.lower
-                random_combination = random.choice(combination)
-                print(random_combination, end='')
-            print("\n")
-        else:
-            print("Incorrect password length. Please enter an whole number!")
+        while True:
+            length = input("# Enter the password length: ")
+            if length.isdigit():
+                length = int(length)
+                for _ in range(length):
+                    combination = self.digits + self.upper + self.lower
+                    random_combination = random.choice(combination)
+                    print(random_combination, end='')
+                print("\n")
+                break
+            else:
+                print("Incorrect password length. Please enter an whole number!")
 
 
 data = Data(0, 0, 0)
