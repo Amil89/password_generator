@@ -13,7 +13,7 @@ class Data:
 
     def create_password(self, length):
         while True:
-            length = input("# Enter the password length: ")
+            length = input("=> Enter the password length: ")
             if length.isdigit():
                 length = int(length)
                 for _ in range(length):
@@ -23,7 +23,7 @@ class Data:
                 print("\n")
                 break
             else:
-                print("Incorrect password length. Please enter an whole number!")
+                print("\nIncorrect password length. Please enter an whole number!\n")
 
 
 data = Data(0, 0, 0)
